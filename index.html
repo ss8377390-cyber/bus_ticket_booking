@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartBus – Ticket Booking</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(120deg, #1d2671, #c33764);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            width: 420px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1d2671;
+            margin-bottom: 5px;
+        }
+
+        p {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #1d2671;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #14205a;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>🚌 SmartBus Booking</h2>
+    <p>Fast • Safe • Reliable Travel</p>
+
+    <form action="insert.php" method="POST">
+        <div class="input-group">
+            <input type="text" name="customer_name" placeholder="Customer Name" required>
+        </div>
+
+        <div class="input-group">
+            <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="input-group">
+            <input type="text" name="bus_no" placeholder="Bus Number" required>
+        </div>
+
+        <div class="input-group">
+            <input type="text" name="source_place" placeholder="From City" required>
+        </div>
+
+        <div class="input-group">
+            <input type="text" name="destination_place" placeholder="To City" required>
+        </div>
+
+        <div class="input-group">
+            <input type="date" name="journey_date" required>
+        </div>
+
+        <div class="input-group">
+            <input type="number" name="total_members" placeholder="Number of Passengers" required>
+        </div>
+
+        <button class="btn">Book Ticket</button>
+    </form>
+
+    <div class="footer">
+        © 2025 SmartBus | Travel Smart
+    </div>
+</div>
+
+</body>
+</html>
